@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+
+  roles:
+    - cleanup
+    - common
+  #  - mysql
+  #  - nginx
+  #  - php-fpm

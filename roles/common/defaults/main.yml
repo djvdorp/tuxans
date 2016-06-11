@@ -1,0 +1,8 @@
+---
+# defaults file for common
+# CHANGE THIS! Default SSH ports with password authentication is VERY insecure.
+# SSHd port should remain 22 during development for Vagrant to work properly!
+sshd_port: 22
+permit_root_login: without-password
+hostname_fqdn: server.example.com
+hostname: server

@@ -1,0 +1,22 @@
+---
+# TODO
+- name: 'Aptitude safe-upgrade all packages'
+  apt: upgrade=safe update_cache=yes force=yes
+
+- name: 'Reconfigure sshd - change port and disable root login'
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config owner=root group=root mode=0644
+
+- name: 'Restart ssh service to apply changes'
+  service: name=ssh state=restarted
+
+- name: 'Generate /etc/hosts file'
+  template: src=hosts.j2 dest=/etc/hosts owner=root group=root mode=0644
+
+- name: 'Set Hostname'
+  hostname: name="{{ hostname }}"
+
+- name: 'Restart hostname service to apply changes'
+  service: name=hostname state=restarted
+
+- name: 'Basic hardening of sysctl.conf'
+  template: src=sysctl.conf.j2 dest=/etc/sysctl.conf owner=root group=root mode=0644
