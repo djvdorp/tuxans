@@ -1,0 +1,16 @@
+---
+- src: geerlingguy.nginx
+  version: 2.1.0
+  path: roles/geerlingguy.nginx
+
+- src: tersmitten.percona-server
+  version: v3.0.2
+  path: roles/tersmitten.percona-server
+
+- src: geerlingguy.php
+  version: 2.0.3
+  path: roles/geerlingguy.php
+
+- src: geerlingguy.php-mysql
+  version: 1.2.0
+  path: roles/geerlingguy.php-mysql

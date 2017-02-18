@@ -2,9 +2,15 @@
 - hosts: all
   become: yes
 
+  vars_files:
+    - vars/main.yml
   roles:
     - cleanup
     - common
+    - geerlingguy.nginx
+    - tersmitten.percona-server
+    - geerlingguy.php
+    - geerlingguy.php-mysql
   #  - nginx
   #  - mysql
   #  - php5-fpm
