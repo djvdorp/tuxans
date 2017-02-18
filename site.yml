@@ -5,6 +5,6 @@
   roles:
     - cleanup
     - common
-  #  - mysql
   #  - nginx
-  #  - php-fpm
+  #  - mysql
+  #  - php5-fpm
